@@ -1,0 +1,247 @@
+/* All Pages */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url("../images/noisy_grid.png");
+    background-color: #cccccc;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777777;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-color: #cccccc;
+    border-bottom-width: 2px;
+}
+
+.header-content, main {
+    display: table;
+    margin: auto;
+}
+
+.header-content {
+    display: flex;
+    width: 960px;
+}
+
+nav {
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-content {
+    display: inline;
+    padding: 5px;
+    font-size: 18px;
+}
+
+a {
+    color: #777777;
+    text-decoration: none;
+}
+
+main {
+    width: 890px;
+    background-color: #ffffff;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 15px 35px;
+    border-bottom-style: solid;
+    border-bottom-color: #cccccc;
+    border-bottom-width: 1px;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    padding: 30px 0px;
+    background-color: #4aaaa5;
+    width: 320px;
+}
+
+h2 {
+    color: #4aaaa5;
+}
+
+hr {
+    border-top: 2px solid #cccccc;
+    margin-bottom: 25px;
+}
+
+.footer {
+    flex-shrink: 0;
+    background-color: #666666;
+    border-top-style: solid;
+    border-top-color: #4aaaa5;
+    border-top-width: 7px;
+}
+
+.footer-content {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #c5c7be;
+    padding: 35px 0px 5px 0px;
+}
+
+/* About Page */
+
+#my-image {
+    float: left;
+    width: 200px;
+    margin: 0px 25px 15px 0px;
+}
+
+.bio {
+    line-height: 30px;
+}
+
+/* Contact Page */
+
+label {
+    display: block;
+    margin: 20px 0px 5px 0px;
+}
+
+input[type=text], #message {
+    width: 870px;
+    padding: 8px;
+    color: #777777;
+    font-size: 14px;
+    border-style: solid;
+    border-color: #cccccc;
+    border-width: 1px;
+}
+
+input[type=submit] {
+    font-size: 15px;
+    margin-top: 20px;
+    background-color: #4aaaa5;
+    border: none;
+    color: #ffffff;
+    padding: 9px 25px;
+    display: block;
+}
+
+#message {
+    height: 200px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Portfolio Page */
+
+.portfolio-image-container {
+    position: relative;
+    width: 220px;
+    height: 165px;
+}
+
+.portfolio-image-container .portfolio-image-caption {
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    bottom: 10px;
+    left: 0px;
+    background: #4aaaa5;
+}
+
+.portfolio-image-caption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+td {
+    padding: 0px 20px 20px 0px;
+}
+
+/* These rules take effect when the browser's width is either 980px or less. */
+@media screen and (max-width: 980px) {
+    .header-content, main {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .header-content {
+        width: auto;
+    }
+
+    main {
+        width: 600px;
+    }
+
+    input[type=text], #message {
+        width: 580px;
+    }
+}
+
+/* These rules take effect when the browser's width is either 768px or less. */
+@media screen and (max-width: 768px) {
+    .header-content, main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    main {
+        width: auto;
+    }
+
+    input[type=text], #message {
+        width: 624px;
+    }
+
+    .table-container {
+        width: 642px;
+    }
+}
+
+/* These rules take effect when the browser's width is either 640px or less. */
+@media screen and (max-width: 640px) {
+    header {
+        position: static;
+    }
+
+    input[type=text], #message {
+        width: 496px;
+    }
+
+    .table-container {
+        width: 500px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    h1 {
+        width: auto;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
